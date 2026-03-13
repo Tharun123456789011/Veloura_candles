@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VELOURA | Luxury Fragrance & Candles</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-logo text-gold">VELOURA</a>
+            <ul class="nav-links">
+                <li><a href="shop.html" class="nav-link">Shop</a></li>
+                <li><a href="#featured" class="nav-link">Collections</a></li>
+                <li><a href="#about" class="nav-link">Our Story</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div class="nav-actions">
+                <a href="admin.html" class="nav-link" style="font-size: 0.8rem; opacity: 0.5;"><i
+                        class="fa-solid fa-lock" title="Admin"></i></a>
+                <a href="checkout.html" class="cart-icon">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="cart-badge" id="nav-cart-badge">0</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="candle-scene">
+            <!-- Simulated candles using CSS & JS Canvas -->
+            <canvas id="candleCanvas" class="candle-canvas"></canvas>
+
+            <div class="candle-glow primary-glow"></div>
+            <div class="candle-glow secondary-glow delay-1"></div>
+            <div class="candle-glow tertiary-glow delay-2"></div>
+        </div>
+
+        <div class="hero-content container">
+            <h1 class="hero-title fade-in gold-gradient-text">Ignite<br>The Senses</h1>
+            <p class="hero-subtitle fade-in delay-1">Handmade luxury candles crafted from premium essential oils and
+                rich resonant woods.</p>
+            <div class="fade-in delay-2">
+                <a href="shop.html" class="btn btn-outline">Explore Collection</a>
+            </div>
+        </div>
+
+        <div class="scroll-indicator fade-in delay-3">
+            <span>Discover</span>
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand Introduction -->
+    <section class="brand-intro container" id="about">
+        <div class="intro-grid">
+            <div class="intro-text fade-in-scroll">
+                <h2 class="section-title">The Art of <span class="gold-gradient-text">Illumination</span></h2>
+                <p>At VELOURA, we believe a fragrance is the most intimate signature of a space. Our master perfumers
+                    blend rare botanicals, aged woods, and delicate resins to create olfactory masterpieces.</p>
+                <p>Each candle is meticulously <strong>handmade</strong> and hand-poured in small batches by artisan
+                    candle makers. Using our proprietary natural wax blend, we ensure a clean, slow burn that fills your
+                    sanctuary with captivating, multi-layered aromas.</p>
+                <a href="#" class="nav-link" style="margin-top: 1.5rem; display: inline-block;">Read Our Story <i
+                        class="fa-solid fa-arrow-right" style="margin-left: 5px;"></i></a>
+            </div>
+            <div class="intro-visual fade-in-scroll">
+                <div class="visual-box">
+                    <div class="visual-overlay"></div>
+                    <!-- Placeholder wooden background texture effect -->
+                    <div class="wood-texture"></div>
+                    <div class="floating-candle" id="intro-candle">
+                        <div class="flame"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Collection -->
+    <section class="featured-section" id="featured">
+        <div class="container">
+            <div class="section-header text-center fade-in-scroll">
+                <h2 class="section-title">Signature <span class="gold-gradient-text">Scents</span></h2>
+                <p class="section-subtitle">Discover our most beloved fragrances.</p>
+            </div>
+
+            <div class="featured-grid" id="featured-products">
+                <!-- Populated by JS -->
+            </div>
+
+            <div class="text-center" style="margin-top: 4rem;">
+                <a href="shop.html" class="btn btn-primary">View Entire Collection</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="nav-logo text-gold">VELOURA</a>
+                    <p class="footer-desc">Curating atmospheric luxury through the ancient art of perfumery and handmade
+                        candle making.</p>
+                    <div class="social-links" style="display: flex; gap: 1rem; color: var(--gold);">
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h3 class="footer-title">Explore</h3>
+                    <ul>
+                        <li><a href="shop.html">All Candles</a></li>
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="#">Best Sellers</a></li>
+                        <li><a href="#">Gift Sets</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h3 class="footer-title">Support</h3>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping & Returns</a></li>
+                        <li><a href="#">Candle Care</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-newsletter">
+                    <h3 class="footer-title">The Inner Circle</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">Join to receive
+                        exclusive offers and early access to new collections.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Email Address" required>
+                        <button type="submit">Join</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 VELOURA INC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/store.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

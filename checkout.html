@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VELOURA | Secure Checkout</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/checkout.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+</head>
+
+<body class="checkout-page">
+    <!-- Minimal Navigation for Checkout -->
+    <nav class="navbar scrolled" id="navbar" style="padding: 1rem 0;">
+        <div class="container text-center">
+            <a href="index.html" class="nav-logo text-gold" style="font-size: 1.8rem;">VELOURA</a>
+            <p style="font-size: 0.8rem; letter-spacing: 0.1em; color: var(--text-muted); margin-top: 0.2rem;">SECURE
+                CHECKOUT <i class="fa-solid fa-lock"></i></p>
+        </div>
+    </nav>
+
+    <main class="checkout-main container fade-in" id="checkout-container">
+        <!-- Layout filled by JS depending on cart state -->
+        <div style="text-align: center; padding: 10rem 0;">
+            <i class="fa-solid fa-spinner fa-spin" style="font-size: 2rem; color: var(--gold);"></i>
+        </div>
+    </main>
+
+    <!-- Confirmation Modal Template (hidden by default) -->
+    <div id="confirmation-view" class="confirmation-view" style="display: none;">
+        <div class="confirmation-card fade-in delay-1">
+            <div class="success-icon">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <h2>Order Complete</h2>
+            <p>Thank you for choosing VELOURA. Your luxurious experience awaits.</p>
+            <p class="order-number">Order #<span id="order-id-display"></span></p>
+            <a href="shop.html" class="btn btn-outline" style="margin-top: 2rem;">Return to Shop</a>
+        </div>
+    </div>
+
+    <!-- Script references -->
+    <script src="js/store.js"></script>
+    <script src="js/checkout.js"></script>
+</body>
+
+</html>
