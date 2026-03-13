@@ -248,22 +248,39 @@ img {
 
 /* Shared Header for pages like Shop, Checkout */
 .page-header {
-    padding: 8rem 0 4rem;
+    padding: 10rem 0 4rem;
+    /* More top padding for transparent nav */
     text-align: center;
-    background: radial-gradient(circle at center top, rgba(212, 175, 55, 0.1) 0%, var(--bg-dark) 70%);
-    border-bottom: 1px solid var(--border-color);
+    background: transparent;
+    /* Remove solid background */
+    border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+    /* Match reference separator line */
+    position: relative;
 }
 
 .page-title {
     font-size: 3.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
+    font-weight: 400;
 }
 
 .page-subtitle {
-    color: var(--text-muted);
-    font-size: 1.1rem;
-    max-width: 600px;
-    margin: 0 auto;
+    display: none;
+    /* Hide subtitle to match the clean look of reference */
+}
+
+/* Add the small diamond separator under title from reference */
+.page-header::after {
+    content: '✧';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--gold);
+    font-size: 1.2rem;
+    background-color: transparent;
+    /* No background to let wood show */
+    padding: 0 10px;
 }
 
 /* Footer shared component */

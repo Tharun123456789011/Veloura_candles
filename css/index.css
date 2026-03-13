@@ -314,31 +314,37 @@
     gap: 2rem;
 }
 
-/* Product Card */
+/* Product Card - Redesigned to match LUMIRE reference */
 .product-card {
-    background-color: var(--bg-card);
-    border: 1px solid var(--border-light);
-    border-radius: 2px;
+    background-color: transparent;
+    /* Remove solid background */
+    border: none;
+    /* Remove border */
     overflow: hidden;
     transition: all var(--transition-smooth);
     position: relative;
-    group: card;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Center everything horizontally */
 }
 
 .product-card:hover {
-    border-color: var(--border-color);
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .product-image-container {
     height: 350px;
+    width: 100%;
     overflow: hidden;
     position: relative;
-    background-color: #1a1a1a;
+    background-color: transparent;
+    /* Remove container background */
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 1.5rem;
+    /* Space between image and text */
 }
 
 .product-image {
@@ -346,60 +352,74 @@
     height: 100%;
     object-fit: cover;
     transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-    opacity: 0.8;
+    opacity: 1;
+    /* Full opacity to match reference */
 }
 
 .product-card:hover .product-image {
-    transform: scale(1.05);
-    opacity: 1;
+    transform: scale(1.03);
+    /* Subtle scale */
 }
 
 .product-info {
-    padding: 1.5rem;
+    padding: 0;
+    /* Remove padding */
     text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .product-family {
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--gold);
-    margin-bottom: 0.5rem;
+    display: none;
+    /* Hide family in grid view to match reference */
 }
 
 .product-title {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    font-family: var(--font-heading);
+    /* Force serif */
+    color: var(--gold-light);
+    /* Use gold color for title */
+    letter-spacing: 0.05em;
+    font-weight: 400;
 }
 
 .product-price {
-    font-family: var(--font-body);
-    color: var(--text-muted);
-    margin-bottom: 1.5rem;
+    display: none;
+    /* Hide price in grid view to match reference */
 }
 
 .btn-add-cart {
-    width: 100%;
-    padding: 0.8rem;
-    background-color: transparent;
-    border: 1px solid var(--border-light);
-    color: var(--text-main);
+    width: 160px;
+    /* Specific width like reference */
+    padding: 0.6rem;
+    background-color: #997a15;
+    /* Base dark gold to mimic lighting */
+    background: linear-gradient(to bottom, #b38c22, #80610f);
+    /* Metallic gold gradient */
+    border: 1px solid #c9a96e;
+    /* Lighter gold border */
+    color: #fff;
+    /* White text */
     cursor: pointer;
     font-family: var(--font-body);
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     transition: all var(--transition-fast);
-}
-
-.product-card:hover .btn-add-cart {
-    border-color: var(--gold);
-    color: var(--gold);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    /* Button shadow */
 }
 
 .btn-add-cart:hover {
-    background-color: var(--gold);
-    color: var(--bg-darker) !important;
+    background: linear-gradient(to bottom, #c9a96e, #997a15);
+    /* Brighter on hover */
+    color: #fff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5), 0 0 15px rgba(212, 175, 55, 0.4);
 }
 
 /* Responsive */
