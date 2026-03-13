@@ -522,13 +522,30 @@ img {
 @media (max-width: 768px) {
     .details-layout {
         grid-template-columns: 1fr !important;
+        height: 85vh;
+        /* Limit height to viewport */
+        display: flex;
+        flex-direction: column;
     }
 
     .details-image-col {
-        height: 300px;
+        height: 250px;
+        flex-shrink: 0;
     }
 
     .details-content-col {
-        padding: 2rem !important;
+        padding: 1.5rem !important;
+        overflow-y: auto;
+        /* Enable scrolling for text */
+        flex-grow: 1;
+        padding-bottom: 5rem !important;
+        /* Extra padding so the button doesn't hide text */
+    }
+
+    .details-content-col .btn {
+        position: static;
+        /* Force button into normal flow if it was absolute */
+        width: 100%;
+        margin-top: 1rem;
     }
 }
