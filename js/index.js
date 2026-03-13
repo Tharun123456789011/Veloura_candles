@@ -286,3 +286,27 @@ function initHeroCanvas() {
     initParticles();
     animate();
 }
+
+// Toast Notification
+function showToast(message) {
+    const container = document.getElementById('toast-container');
+    if (!container) return;
+
+    const toast = document.createElement('div');
+    toast.className = 'toast';
+    toast.innerHTML = `
+        <div class="toast-icon">
+            <i class="fa-solid fa-check-circle"></i>
+        </div>
+        <div style="display: flex; flex-direction: column;">
+            <p style="margin: 0; font-size: 0.95rem; font-weight: 500;">${message}</p>
+        </div>
+    `;
+
+    container.appendChild(toast);
+
+    setTimeout(() => {
+        toast.classList.add('fade-out');
+        setTimeout(() => toast.remove(), 300);
+    }, 3000);
+}

@@ -392,8 +392,11 @@
 }
 
 .product-price {
-    display: none;
-    /* Hide price in grid view to match reference */
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    font-family: var(--font-body);
+    margin-bottom: 2rem;
+    letter-spacing: 0.1em;
 }
 
 .btn-add-cart {

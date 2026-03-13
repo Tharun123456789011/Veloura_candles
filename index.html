@@ -108,6 +108,69 @@
         </div>
     </section>
 
+    <!-- Toast Notification for Add to Cart -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <!-- Product Details Modal -->
+    <div id="product-details-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-box slide-up" style="max-width: 900px; width: 95%; overflow: hidden; padding: 0;">
+            <button class="close-modal" id="btn-close-details"
+                style="position: absolute; top: 1.5rem; right: 1.5rem; z-index: 10; background: var(--bg-darker); border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;"><i
+                    class="fa-solid fa-times"></i></button>
+            <div class="details-layout" style="display: grid; grid-template-columns: 1fr 1fr; min-height: 500px;">
+                <div class="details-image-col"
+                    style="background-color: #1a1a1a; display: flex; align-items: center; justify-content: center; position: relative;">
+                    <img id="detail-image" src="" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="details-content-col"
+                    style="padding: 3rem; background-color: var(--bg-card); display: flex; flex-direction: column; overflow: hidden; max-height: 80vh;">
+
+                    <div class="details-scroll-area"
+                        style="overflow-y: auto; flex-grow: 1; padding-right: 1rem; margin-bottom: 2rem;">
+                        <span id="detail-family" class="product-family">Floral</span>
+                        <h2 id="detail-title"
+                            style="font-size: 2.5rem; margin-bottom: 0.5rem; font-family: var(--font-heading);">Product
+                            Name
+                        </h2>
+                        <p id="detail-price" class="product-price"
+                            style="font-size: 1.25rem; color: var(--gold); margin-bottom: 2rem;">₹0.00</p>
+
+                        <div style="margin-bottom: 2rem;">
+                            <h4
+                                style="font-size: 0.85rem; color: var(--gold); margin-bottom: 0.5rem; letter-spacing: 0.1em;">
+                                THE STORY</h4>
+                            <p id="detail-story"
+                                style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">
+                                Product story goes here.</p>
+                        </div>
+
+                        <div style="margin-bottom: 2rem;">
+                            <h4
+                                style="font-size: 0.85rem; color: var(--gold); margin-bottom: 0.5rem; letter-spacing: 0.1em;">
+                                BENEFITS</h4>
+                            <p id="detail-benefits"
+                                style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">
+                                Benefits go here.</p>
+                        </div>
+
+                        <div style="margin-bottom: 1rem;">
+                            <h4
+                                style="font-size: 0.85rem; color: var(--gold); margin-bottom: 0.5rem; letter-spacing: 0.1em;">
+                                PURPOSE</h4>
+                            <p id="detail-purpose"
+                                style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">
+                                Purpose goes here.</p>
+                        </div>
+                    </div>
+
+                    <div style="flex-shrink: 0; padding-top: 1rem; border-top: 1px solid var(--border-color);">
+                        <button id="detail-add-cart" class="btn btn-primary" style="width: 100%;">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer class="site-footer">
         <div class="container">
