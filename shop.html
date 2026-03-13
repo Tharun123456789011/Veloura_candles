@@ -39,7 +39,10 @@
 
     <!-- Page Header -->
     <header class="page-header">
-        <div class="container fade-in">
+        <div class="container fade-in" style="position: relative;">
+            <a href="index.html" class="nav-link"
+                style="position: absolute; top: -3rem; left: 1rem; color: var(--text-muted); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em;"><i
+                    class="fa-solid fa-arrow-left" style="margin-right: 0.5rem;"></i>Back to Home</a>
             <h1 class="page-title gold-gradient-text">The Collection</h1>
             <p class="page-subtitle">Immerse yourself in our curated selection of fine fragrances, each designed to
                 transform your environment.</p>
@@ -98,39 +101,47 @@
                     <img id="detail-image" src="" style="width: 100%; height: 100%; object-fit: cover;">
                 </div>
                 <div class="details-content-col"
-                    style="padding: 3rem; background-color: var(--bg-card); display: flex; flex-direction: column; overflow-y: auto; max-height: 80vh;">
-                    <span id="detail-family" class="product-family">Floral</span>
-                    <h2 id="detail-title"
-                        style="font-size: 2.5rem; margin-bottom: 0.5rem; font-family: var(--font-heading);">Product Name
-                    </h2>
-                    <p id="detail-price" class="product-price"
-                        style="font-size: 1.25rem; color: var(--gold); margin-bottom: 2rem;">₹0.00</p>
+                    style="padding: 3rem; background-color: var(--bg-card); display: flex; flex-direction: column; overflow: hidden; max-height: 80vh;">
 
-                    <div style="margin-bottom: 2rem;">
-                        <h4
-                            style="font-size: 0.85rem; color: var(--gold); margin-bottom: 0.5rem; letter-spacing: 0.1em;">
-                            THE STORY</h4>
-                        <p id="detail-story" style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">
-                            Product story goes here.</p>
+                    <div class="details-scroll-area"
+                        style="overflow-y: auto; flex-grow: 1; padding-right: 1rem; margin-bottom: 2rem;">
+                        <span id="detail-family" class="product-family">Floral</span>
+                        <h2 id="detail-title"
+                            style="font-size: 2.5rem; margin-bottom: 0.5rem; font-family: var(--font-heading);">Product
+                            Name
+                        </h2>
+                        <p id="detail-price" class="product-price"
+                            style="font-size: 1.25rem; color: var(--gold); margin-bottom: 2rem;">₹0.00</p>
+
+                        <div style="margin-bottom: 2rem;">
+                            <h4
+                                style="font-size: 0.85rem; color: var(--gold); margin-bottom: 0.5rem; letter-spacing: 0.1em;">
+                                THE STORY</h4>
+                            <p id="detail-story"
+                                style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">
+                                Product story goes here.</p>
+                        </div>
+
+                        <div style="margin-bottom: 2rem;">
+                            <h4
+                                style="font-size: 0.85rem; color: var(--gold); margin-bottom: 0.5rem; letter-spacing: 0.1em;">
+                                BENEFITS</h4>
+                            <p id="detail-benefits"
+                                style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">
+                                Benefits go here.</p>
+                        </div>
+
+                        <div style="margin-bottom: 1rem;">
+                            <h4
+                                style="font-size: 0.85rem; color: var(--gold); margin-bottom: 0.5rem; letter-spacing: 0.1em;">
+                                PURPOSE</h4>
+                            <p id="detail-purpose"
+                                style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">
+                                Purpose goes here.</p>
+                        </div>
                     </div>
 
-                    <div style="margin-bottom: 2rem;">
-                        <h4
-                            style="font-size: 0.85rem; color: var(--gold); margin-bottom: 0.5rem; letter-spacing: 0.1em;">
-                            BENEFITS</h4>
-                        <p id="detail-benefits" style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">
-                            Benefits go here.</p>
-                    </div>
-
-                    <div style="margin-bottom: 3rem;">
-                        <h4
-                            style="font-size: 0.85rem; color: var(--gold); margin-bottom: 0.5rem; letter-spacing: 0.1em;">
-                            PURPOSE</h4>
-                        <p id="detail-purpose" style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">
-                            Purpose goes here.</p>
-                    </div>
-
-                    <div style="margin-top: auto;">
+                    <div style="flex-shrink: 0; padding-top: 1rem; border-top: 1px solid var(--border-color);">
                         <button id="detail-add-cart" class="btn btn-primary" style="width: 100%;">Add to Cart</button>
                     </div>
                 </div>
