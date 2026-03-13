@@ -192,8 +192,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--bg-card);
+    background-color: rgba(10, 10, 9, 0.5);
+    /* Let wood show, darker for contrast */
+    backdrop-filter: blur(10px);
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(212, 175, 55, 0.2);
 }
 
 .wood-texture {
@@ -299,7 +302,8 @@
 /* Featured Section */
 .featured-section {
     padding: var(--spacing-xxl) 0;
-    background-color: var(--bg-darker);
+    background-color: transparent;
+    /* Let wood show */
 }
 
 .section-subtitle {
