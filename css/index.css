@@ -459,7 +459,7 @@
     }
 
     .hero-overlay {
-        background: linear-gradient(to bottom, transparent 0%, rgba(10, 10, 9, 0.9) 60%, var(--bg-dark) 100%);
+        background: linear-gradient(to bottom, transparent 0%, rgba(10, 10, 9, 0.8) 60%, rgba(10, 10, 9, 0.9) 100%);
     }
 
     .hero-content {

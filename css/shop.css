@@ -170,17 +170,4 @@
     .shop-layout {
         grid-template-columns: 1fr;
     }
-
-    .shop-sidebar {
-        position: static;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 2rem;
-    }
-}
-
-@media (max-width: 600px) {
-    .shop-sidebar {
-        grid-template-columns: 1fr;
-    }
 }
