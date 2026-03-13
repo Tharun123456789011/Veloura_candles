@@ -46,6 +46,10 @@ html {
 body {
     font-family: var(--font-body);
     background-color: var(--bg-dark);
+    background-image: url('../assets/dark_wood_texture_1773404473689.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     color: var(--text-main);
     line-height: 1.6;
     overflow-x: hidden;
@@ -162,9 +166,10 @@ img {
 }
 
 .navbar.scrolled {
-    background-color: rgba(10, 10, 9, 0.95);
+    background-color: transparent;
+    /* Let wood show */
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
     padding: 1rem 0;
 }
 
@@ -285,8 +290,9 @@ img {
 
 /* Footer shared component */
 .site-footer {
-    background-color: var(--bg-darker);
-    border-top: 1px solid var(--border-light);
+    background-color: transparent;
+    /* Let wood show */
+    border-top: 1px solid rgba(212, 175, 55, 0.2);
     padding: 5rem 0 2rem;
     margin-top: 5rem;
 }
@@ -483,8 +489,10 @@ img {
 }
 
 .modal-box {
-    background-color: var(--bg-card);
-    border: 1px solid var(--border-color);
+    background-color: rgba(10, 10, 9, 0.85);
+    /* Darken slightly but let wood peek through */
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(212, 175, 55, 0.3);
     border-radius: 4px;
     /* Slight rounding for a premium feel */
     position: relative;
